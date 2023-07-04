@@ -1,0 +1,111 @@
+.quiz {
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    display: flex;
+    font-size: 22px;
+    align-self: flex-start;
+}
+.text {
+    font-size: 14px;
+    font-family: "RocknRoll";
+}
+.text-important {
+    font-size: 22px;
+    font-family: "RocknRoll";
+}
+.current {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 15px;
+    gap: 15px;
+    min-height: 200px;
+    width: 100%;
+
+    background: linear-gradient(transparent, #88b7eb);
+}
+.current__content-block {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.current-block {
+    display: flex;
+}
+.current-name {
+    font-size: 22px;
+    font-family: "RocknRoll";
+}
+.current-image {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-width: 200px;
+    min-height: 155px;
+    width: 200px;
+    border-radius: 5px;
+    margin-right: 15px;
+}
+.status {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: #c1ae83;
+    background: radial-gradient(circle farthest-side at 50% 500%, #c1ae83, transparent);
+    border-radius: 25px;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+}
+.status__btn {
+    padding: 10px;
+    color: white;
+    font-weight: bolder;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Rubik";
+
+    font-size: calc((1vw + 1vh) / 1.1);
+}
+.status__btn-active {
+    background-color: #84c205;
+    border-radius: 80%;
+}
+
+.nextLevel {
+    font-family: "RocknRoll";
+    background-color: rgb(153, 181, 197);
+    border-radius: 25px;
+    font-size: 22px;
+    margin-top: 15px;
+    padding: 15px;
+}
+.nextLevel-active {
+    @extend .nextLevel;
+    cursor: pointer;
+    background-color: rgb(5, 160, 39);
+    &:hover {
+        background-color: #a7bd00;
+    }
+}
+.bottom-block {
+    display: flex;
+    width: 100%;
+    background: #88b7eb;
+    border-radius:0 0 25px 25px;
+}
+@media (max-width: 768px) {
+    .current {
+        justify-content: space-evenly;
+    }
+
+    .bottom-block {
+        flex-direction: column;
+    }
+}
